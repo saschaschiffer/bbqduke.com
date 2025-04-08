@@ -1,0 +1,30 @@
+# --- Frontend (Next.js, Node, Tailwind etc.) ---
+node_modules/        # lokale Dependencies, werden bei Installation neu erzeugt
+.next/               # Next.js Build-Ordner (Server, Static, SSR etc.)
+dist/                # evtl. Build-Ordner für Tools oder externe Libs
+out/                 # bei SSG: Next.js exportierter Static-Ordner
+.env*                # .env, .env.local, .env.development → enthalten Secrets/API Keys
+
+# --- Backend (Kotlin, Spring Boot) ---
+target/              # Build-Ausgabe von Maven
+.gradle/             # Gradle Cache
+build/               # generierter Build-Ordner (z. B. durch Gradle)
+*.iml                # IntelliJ-Projektdateien
+*.class              # kompilierte Java/Kotlin-Klassen
+
+# --- Docker & Umgebung ---
+docker-compose.override.yml   # lokale Overrides (optional)
+.env                          # env-Dateien nicht einchecken (z. B. Datenbank-Zugänge)
+
+# --- IDEs & Editoren ---
+.vscode/             # lokale VS Code Einstellungen (nicht teamrelevant)
+.idea/               # IntelliJ/JetBrains-Projektdateien (lokal spezifisch)
+*.swp                # Swap-Files von Vim
+.DS_Store            # Mac-spezifische Metadatei
+Thumbs.db            # Windows-Vorschaucache
+
+# --- Sonstiges ---
+logs/
+*.log                # allgemeine Logdateien
+npm-debug.log*       # Fehlerprotokolle bei npm crash
+yarn-debug.log*      # dito für yarn
